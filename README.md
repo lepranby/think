@@ -9,4 +9,4 @@ Project status tracking app for freelancers.
 ![Simulator Screenshot - iPhone 15 Pro - 2024-05-01 at 09 30 39](https://github.com/lepranby/think/assets/113884557/54773c26-ae3d-4435-ad17-1d8c4e4a10fe)
 
 
-<img src="[https://github.com/lepranby/think/assets/113884557/452f2bd7-1423-43fc-a10e-b289c86c6b03" width="300" />
+<img src="https://github.com/lepranby/think/assets/113884557/452f2bd7-1423-43fc-a10e-b289c86c6b03" width="300"/>
