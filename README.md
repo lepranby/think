@@ -10,7 +10,7 @@ Project status tracking app for freelancers and small teams.
 <br>
 ChangeLog (03.05)
 <br>
-
+<br>
 - Bug fixes
 - Optimized for large screens
 - Changed the data schema in DeveloperModelContainer
