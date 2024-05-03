@@ -6,7 +6,7 @@ Project status tracking app for freelancers and small teams.
 <img src="https://github.com/lepranby/think/assets/113884557/b6852435-d8a9-4fcc-9087-3ff98739db97" width="190"/>
 <img src="https://github.com/lepranby/think/assets/113884557/cdfceaca-3b8c-44b5-b2dc-f67802e70205" width="190"/>
 <img src="https://github.com/lepranby/think/assets/113884557/9bdadff6-b7cc-4dcd-bb9a-9a2cdd2bc8b6" width="190"/>
-
+<br>
 ChangeLog (03.05)
 
 - Bug fixes
@@ -15,6 +15,7 @@ ChangeLog (03.05)
 - Added the ability to select the application title display mode
 - Added the ability to select a deadline for a project
 - Added "About" screen
+- Remastered ProjectRow View
 
 Depricated (03.05)
 
