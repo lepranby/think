@@ -21,11 +21,10 @@ struct ProjectView: View {
                 EmptyListView()
             } else {
                 List {
-                    Section (badge) {
-                        ExtractedView()
+                    Section {
+                        ProjectRow()
                     }
                 }
-                .padding(.top, -10)
             }
         }
     }
@@ -40,10 +39,10 @@ struct ProjectView: View {
         }, sort: [sort])
     }
 
-    var badge: String {
-        let count = projects.count
-        return count == 0 ? "No projects" : "\(count) is active"
-    }
+//    var badge: String {
+//        let count = projects.count
+//        return count == 0 ? "No projects" : "TOTAL (\(count))"
+//    }
 }
 
 #Preview {
@@ -51,7 +50,7 @@ struct ProjectView: View {
 }
 
 
-struct ExtractedView: View {
+struct ProjectRow: View {
 
     @Environment(\.modelContext) var modelContext
     @AppStorage("showTimeStamp") private var showTimeStamp: Bool = true
@@ -70,29 +69,37 @@ struct ExtractedView: View {
                             Image(uiImage: uiImage)
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: 42, height: 42)
-                                .clipShape(.rect(cornerRadius: 8))
+                                .frame(width: 64, height: 64)
+                                .clipShape(.rect(cornerRadius: 12))
                         } else {
                             ZStack {
                                 Rectangle()
-                                    .frame(width: 42, height: 42)
-                                    .clipShape(.rect(cornerRadius: 8))
-                                    .foregroundStyle(.gray.opacity(0.2))
-                                Text(project.name.prefix(1))
+                                    .frame(width: 64, height: 64)
+                                    .clipShape(.rect(cornerRadius: 12))
+                                    .foregroundStyle(Color.accentColor.gradient)
+                                Text(project.name.prefix(1)).font(.title).foregroundStyle(.white.gradient)
                             }
                         }
-                        VStack (alignment: .leading) {
+                        VStack (alignment: .leading, spacing: 4) {
                             Text(project.name)
                                 .font(.headline).fontWeight(.semibold)
                             Text(project.details)
-                                .font(.subheadline).fontWeight(.regular)
+                                .font(.callout).fontWeight(.regular)
                                 .foregroundStyle(.secondary)
                                 .lineLimit(1)
                                 .multilineTextAlignment(.leading)
+                            if project.target.isEmpty {
+                                Text("Unknown target")
+                                    .font(.footnote).fontWeight(.light)
+                                    .foregroundStyle(.secondary)
+                            } else {
+                                Text("Target: \(project.target)").font(.footnote).fontWeight(.light)
+                                    .foregroundStyle(.secondary)
+                            }
                         }
 
                     }
-                    HStack (spacing: 2) {
+                    HStack (spacing: 12) {
                         Text("Deadline:")
                             .font(.footnote)
                             .fontWeight(.regular)
@@ -107,8 +114,8 @@ struct ExtractedView: View {
                                 .fontWeight(.light)
                                 .foregroundStyle(project.useDeadlines ? .secondary : Color.accentColor.opacity(0.8))
                         }
-
                     }
+                    .padding(.leading, 6)
                 }
             }
         }

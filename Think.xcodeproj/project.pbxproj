@@ -17,13 +17,14 @@
 		262AED3C2BD8EA2700B50BE5 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED3B2BD8EA2700B50BE5 /* ProjectView.swift */; };
 		262AED3E2BD8EBDE00B50BE5 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED3D2BD8EBDE00B50BE5 /* EditProjectView.swift */; };
 		262AED442BD90B2600B50BE5 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED432BD90B2600B50BE5 /* EmptyListView.swift */; };
-		262AED462BD9874D00B50BE5 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED452BD9874D00B50BE5 /* TeamsView.swift */; };
+		262AED462BD9874D00B50BE5 /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED452BD9874D00B50BE5 /* DevelopersView.swift */; };
 		262AED482BD9876600B50BE5 /* EmptyTeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED472BD9876600B50BE5 /* EmptyTeamsView.swift */; };
 		262AED4A2BD9887500B50BE5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED492BD9887500B50BE5 /* SettingsView.swift */; };
-		262AED4D2BD98D1C00B50BE5 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED4C2BD98D1C00B50BE5 /* Toggle.swift */; };
+		262AED4D2BD98D1C00B50BE5 /* AnimatedToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED4C2BD98D1C00B50BE5 /* AnimatedToggle.swift */; };
 		262AED4F2BD98D3900B50BE5 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED4E2BD98D3900B50BE5 /* Haptic.swift */; };
 		262AED512BDA76EE00B50BE5 /* DeveloperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED502BDA76EE00B50BE5 /* DeveloperModel.swift */; };
 		262AED532BDA795900B50BE5 /* EditDevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AED522BDA795900B50BE5 /* EditDevView.swift */; };
+		26B02FC22BE5061B00578CF8 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B02FC12BE5061B00578CF8 /* LicenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +40,14 @@
 		262AED3B2BD8EA2700B50BE5 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		262AED3D2BD8EBDE00B50BE5 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		262AED432BD90B2600B50BE5 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
-		262AED452BD9874D00B50BE5 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		262AED452BD9874D00B50BE5 /* DevelopersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersView.swift; sourceTree = "<group>"; };
 		262AED472BD9876600B50BE5 /* EmptyTeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTeamsView.swift; sourceTree = "<group>"; };
 		262AED492BD9887500B50BE5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		262AED4C2BD98D1C00B50BE5 /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
+		262AED4C2BD98D1C00B50BE5 /* AnimatedToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedToggle.swift; sourceTree = "<group>"; };
 		262AED4E2BD98D3900B50BE5 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		262AED502BDA76EE00B50BE5 /* DeveloperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperModel.swift; sourceTree = "<group>"; };
 		262AED522BDA795900B50BE5 /* EditDevView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDevView.swift; sourceTree = "<group>"; };
+		26B02FC12BE5061B00578CF8 /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +133,10 @@
 				262AED392BD8E90600B50BE5 /* HomeView.swift */,
 				262AED3B2BD8EA2700B50BE5 /* ProjectView.swift */,
 				262AED3D2BD8EBDE00B50BE5 /* EditProjectView.swift */,
-				262AED452BD9874D00B50BE5 /* TeamsView.swift */,
+				262AED452BD9874D00B50BE5 /* DevelopersView.swift */,
 				262AED522BDA795900B50BE5 /* EditDevView.swift */,
 				262AED492BD9887500B50BE5 /* SettingsView.swift */,
+				26B02FC12BE5061B00578CF8 /* LicenseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,7 +153,7 @@
 		262AED4B2BD98D0B00B50BE5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				262AED4C2BD98D1C00B50BE5 /* Toggle.swift */,
+				262AED4C2BD98D1C00B50BE5 /* AnimatedToggle.swift */,
 				262AED4E2BD98D3900B50BE5 /* Haptic.swift */,
 			);
 			path = Features;
@@ -226,10 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262AED462BD9874D00B50BE5 /* TeamsView.swift in Sources */,
+				262AED462BD9874D00B50BE5 /* DevelopersView.swift in Sources */,
 				262AED532BDA795900B50BE5 /* EditDevView.swift in Sources */,
 				262AED3E2BD8EBDE00B50BE5 /* EditProjectView.swift in Sources */,
 				262AED3C2BD8EA2700B50BE5 /* ProjectView.swift in Sources */,
+				26B02FC22BE5061B00578CF8 /* LicenseView.swift in Sources */,
 				262AED252BD8E7E000B50BE5 /* ContentView.swift in Sources */,
 				262AED232BD8E7E000B50BE5 /* ThinkApp.swift in Sources */,
 				262AED482BD9876600B50BE5 /* EmptyTeamsView.swift in Sources */,
@@ -237,7 +241,7 @@
 				262AED372BD8E88100B50BE5 /* TaskModel.swift in Sources */,
 				262AED512BDA76EE00B50BE5 /* DeveloperModel.swift in Sources */,
 				262AED3A2BD8E90600B50BE5 /* HomeView.swift in Sources */,
-				262AED4D2BD98D1C00B50BE5 /* Toggle.swift in Sources */,
+				262AED4D2BD98D1C00B50BE5 /* AnimatedToggle.swift in Sources */,
 				262AED352BD8E84A00B50BE5 /* ProjectModel.swift in Sources */,
 				262AED4A2BD9887500B50BE5 /* SettingsView.swift in Sources */,
 				262AED4F2BD98D3900B50BE5 /* Haptic.swift in Sources */,

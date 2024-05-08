@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct Toggle: View {
+struct AnimatedToggle: View {
 
     @Binding var isOn: Bool
 

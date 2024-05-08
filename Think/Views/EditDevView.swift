@@ -8,28 +8,71 @@ import SwiftUI
 struct EditDevView: View {
 
     @Bindable var developer: DeveloperModel
-    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         Form {
             Section ("Personal") {
-                TextField("Full name", text: $developer.name)
-                TextField("Details", text: $developer.desc)
-            }
-            Section ("Location") {
                 HStack (spacing: 6) {
-                    Image(systemName: "mappin.and.ellipse").resizable().frame(width: 16, height: 16)
-                        .foregroundStyle(colorScheme == .dark ? .white : .red)
-                    TextField("The place where it happened", text: $developer.location)
+                    Image(systemName: "person").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("Full name", text: $developer.name)
+                }
+                HStack (spacing: 6) {
+                    Image(systemName: "person.wave.2").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("Details", text: $developer.desc)
+                }
+                HStack (spacing: 6) {
+                    Image(systemName: "phone").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("Phone number", text: $developer.phone)
+                        .textContentType(.telephoneNumber)
+                        .keyboardType(.phonePad)
+                }
+                HStack (spacing: 6) {
+                    Image(systemName: "at").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("E-Mail", text: $developer.email)
+                        .textContentType(.emailAddress)
+                        .keyboardType(.emailAddress)
+                }
+            }
+            Section ("Current location") {
+                HStack (spacing: 6) {
+                    Image(systemName: "location").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("USA/London/Remote etc.", text: $developer.location)
                 }
             }
             Section ("Role") {
-                TextField("Role", text: $developer.role)
+                HStack (spacing: 6) {
+                    Image(systemName: "person.fill.questionmark").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("Role", text: $developer.role)
+                }
+
+            }
+            Section ("Skills") {
+                TextField("Junior/Middle/Senior/Team Lead", text: $developer.qualification)
+                TextField("Hard Skills", text: $developer.hardSkills, axis: .vertical)
+                TextField("Soft Skills", text: $developer.softSkills, axis: .vertical)
+            }
+            Section {
+                HStack (spacing: 6) {
+                    Image(systemName: "square.stack.3d.up.fill").resizable().frame(width: 14, height: 14)
+                        .foregroundStyle(Color.accentColor)
+                    TextField("", text: $developer.github)
+                }
+            } header: {
+                Text("Github")
+            } footer: {
+                Text("Like https://github.com/ + alias")
             }
         }
-        .scrollDismissesKeyboard(.automatic)
+        .scrollDismissesKeyboard(.immediately)
+        .listSectionSpacing(2)
         .scrollIndicators(.hidden)
-        .navigationTitle("People")
+        .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

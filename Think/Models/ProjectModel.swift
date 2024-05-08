@@ -25,6 +25,7 @@ import SwiftData
     @Relationship(deleteRule: .cascade) var tasks = [TaskModel]()
 
     init(name: String = "", details: String = "", features: String = "", idea: String = "", date: Date = .now, startDate: Date = .now, useDeadlines: Bool = false, priority: Int = 2, target: String = "", logo: Data? = nil, developer: DeveloperModel? = nil) {
+        
         self.name = name
         self.details = details
         self.features = features

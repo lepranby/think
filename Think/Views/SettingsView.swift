@@ -4,11 +4,14 @@
 //  Created by Aleksej Shapran on 24.04.24
 
 import SwiftUI
+import SwiftData
 
 struct SettingsView: View {
 
     @AppStorage("isDarkModeOn") private var isDarkModeOn: Bool = false
-    @AppStorage("showTimeStamp") private var showTimeStamp: Bool = true
+    @AppStorage("showTimeStamp") private var showTimeStamp: Bool = false
+    @AppStorage("title") private var isTitleBig: Bool = false
+
     @Environment(\.colorScheme) var colorScheme
 
     let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
@@ -19,34 +22,31 @@ struct SettingsView: View {
             List {
                 Section ("Appearance") {
                     withAnimation(.bouncy) {
-                        Toggle(isOn: $isDarkModeOn, text: "Dark mode")
+                        AnimatedToggle(isOn: $isDarkModeOn, text: "Dark mode")
                     }
                     withAnimation(.bouncy) {
-                        Toggle(isOn: $showTimeStamp, text: "Show time in project rows")
+                        AnimatedToggle(isOn: $isTitleBig, text: "Compact title display mode")
+                    }
+                    withAnimation(.bouncy) {
+                        AnimatedToggle(isOn: $showTimeStamp, text: "Show time in deadlines")
                     }
                 }
                 Section ("App") {
                     HStack {
-                        Text("Version")
+                        Text("Version : Build")
                         Spacer(minLength: 0)
-                        Text(version!)
+                        Text("\(version!) : \(build!)")
                     }
-                    Link(destination: URL(string: "https://www.github.com/lepranby")!, label: {
-                        HStack {
-                            Text("Author's Github page")
-                            Spacer(minLength: 0)
-                            Image(systemName: "at")
-                                .foregroundStyle(Color.accentColor)
-                        }
-                        .foregroundStyle(colorScheme == .dark ? .white : .black)
-                    })
-                }.listSectionSpacing(0)
+                }
+                Section ("Other") {
+                    NavigationLink("Credits & License") { LicenseView() }
+                }
 
-            }
-            .scrollIndicators(.hidden)
-            .preferredColorScheme(isDarkModeOn ? .dark : .light)
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
+            }.listSectionSpacing(2)
+                .scrollIndicators(.hidden)
+                .preferredColorScheme(isDarkModeOn ? .dark : .light)
+                .navigationTitle("Settings")
+                .navigationBarTitleDisplayMode(isTitleBig ? .inline : .automatic)
         }
     }
 }

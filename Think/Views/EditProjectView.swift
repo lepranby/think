@@ -57,7 +57,7 @@ struct EditProjectView: View {
                 TextField("Features", text: $project.features, axis: .vertical)
             }
             Section ("Deadline") {
-                Toggle(isOn: $project.useDeadlines.animation(), text: "The project has a deadline")
+                AnimatedToggle(isOn: $project.useDeadlines.animation(), text: "The project has a deadline")
                     .foregroundStyle(.gray.opacity(0.8))
                 if project.useDeadlines == true {
                     DatePicker("Start:", selection: $project.startDate)
