@@ -9,6 +9,12 @@ Data container: SwiftData + @AppStorage for settings.<br>
 <img src="https://github.com/lepranby/think/assets/113884557/cdfceaca-3b8c-44b5-b2dc-f67802e70205" width="190"/>
 <img src="https://github.com/lepranby/think/assets/113884557/9bdadff6-b7cc-4dcd-bb9a-9a2cdd2bc8b6" width="190"/><br><br>
 
+ChangeLog (08.05)
+ 
+- Adjusted the application color scheme to AccentColor
+- Add "Credits" page
+- Fix paddings in Developer rows
+
 ChangeLog (03.05)
  
 - Bug fixes
@@ -16,7 +22,6 @@ ChangeLog (03.05)
 - Changed the data schema in DeveloperModelContainer
 - Added the ability to select the application title display mode
 - Added the ability to select a deadline for a project
-- Added "About" screen
 - Remastered ProjectRow View
 
 Depricated (03.05)
